@@ -91,6 +91,77 @@ public class MinkuTante {
 					runcis = new Minka(minkasVards, skirne, spalvasKrasa, saimnieks, 
 								dzGads, siksnina, cels);
 					break;
+					
+				case "Izsaukt metodi":
+					if(runcis != null) {
+						String[] metodes = {"Paglaudīt", "Nolasīt atribūtus", 
+								"Pabarot", "Nolikt gulēt", "Palielināt vecumu", 
+								"Apskatīt vecumu", "Medīt"};
+						String m = (String)JOptionPane.showInputDialog(null, 
+								"Izvēlies metodi", "Metodes izvēle", 
+								JOptionPane.QUESTION_MESSAGE, null, 
+								metodes, metodes[0]);
+						if(m == null)
+							break;
+						
+						switch(m) {
+							case "Paglaudīt":
+								runcis.murrat();
+								break;
+								
+							case "Nolasīt atribūtus":
+								JOptionPane.showMessageDialog(null, runcis.nolasitAtributus(), 
+										"Informācija", JOptionPane.INFORMATION_MESSAGE);
+								break;
+								
+							case "Pabarot":
+								String atbilde = runcis.pabarot(
+										virknesParbaude("Ar ko pabarot kaķi?", "Zivi"));
+								JOptionPane.showMessageDialog(null, "Kaķis atgriež "+atbilde, 
+										"Informācija", JOptionPane.INFORMATION_MESSAGE);
+								break;
+								
+							case "Nolikt gulēt":
+								String prieksmets = 
+								virknesParbaude("Ko dosi kaķim līdzi uz gultiņu?", "Spilvens");
+								if(prieksmets == null || prieksmets.isEmpty())
+									runcis.gulet();
+								
+								else
+									runcis.gulet(prieksmets);
+								break;
+								
+							case "Palielināt vecumu":
+								runcis.palielinatVecumu();
+								break;
+								
+							case "Apskatīt vecumu":
+								runcis.nolasitVecumu();
+								break;
+								
+							case "Medīt":	
+								runcis.medit();
+								break;
+						}
+						
+					} else
+						JOptionPane.showMessageDialog(null,
+						"Vispirms izveido kaķi!", "Kļūme", 
+						JOptionPane.ERROR_MESSAGE);
+					break;
+					
+				case "Saglabāt failā":
+					
+					break;
+					
+				case "Apskatīt saglabātos kaķus":
+					
+					break;
+					
+				case "Aizvērt":
+					JOptionPane.showMessageDialog(null, "Programma apturēta!",
+							"Informācija", JOptionPane.INFORMATION_MESSAGE);
+					break;
 			}
 		} while(!izvelne.equals("Aizvērt"));
 

@@ -6,8 +6,9 @@
 
 **Darāmo darbu saraksts:**
 - [x] Izveidot klasi "Minka"
-- [ ] Izveidot klasei "MinkuTante"
+- [x] Izveidot klasei "MinkuTante"
 - [ ] Izveidot klasi "DarbsArFailu"
 - [ ] Versionēt visu izstrādes procesu
+- [ ] Kļūdu labojumi ("Izveidot kaķi")
 - [ ] Izvietot projektu GitHub
 - [ ] Sagatavot projekta .jar failu

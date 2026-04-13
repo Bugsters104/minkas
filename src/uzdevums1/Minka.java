@@ -53,7 +53,7 @@ public class Minka {
 	
 	void murrat() {
 		JOptionPane.showMessageDialog(null, 
-		vards + "saka 'murr murr murrr!'", "Paziņojums", 
+		vards + " saka 'murr murr murrr!'", "Paziņojums", 
 		JOptionPane.PLAIN_MESSAGE, bilde);
 	}
 	
@@ -82,9 +82,9 @@ public class Minka {
 	}
 	
 	// Metožu pārslogošana
-	void gule() {
+	void gulet() {
 		JOptionPane.showMessageDialog(null, saimnieks + 
-		"! Aizmirsi iedot man dzesiņu, nevarēšu pagulēt!", "Kļūda", 
+		"! Aizmirsi iedot man sedziņu, nevarēšu pagulēt!", "Kļūda", 
 		JOptionPane.ERROR_MESSAGE);
 	}
 	
