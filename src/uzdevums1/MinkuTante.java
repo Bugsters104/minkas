@@ -151,11 +151,11 @@ public class MinkuTante {
 					break;
 					
 				case "Saglabāt failā":
-					
+					DarbsArFailu.saglabat(runcis, failaNosaukums);
 					break;
 					
 				case "Apskatīt saglabātos kaķus":
-					
+					DarbsArFailu.nolasit(failaNosaukums);
 					break;
 					
 				case "Aizvērt":
