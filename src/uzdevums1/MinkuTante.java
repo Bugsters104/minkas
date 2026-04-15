@@ -166,5 +166,7 @@ public class MinkuTante {
 		} while(!izvelne.equals("Aizvērt"));
 
 	}
-
+// Kad iespējams iegūt kļūdas ziņojumus?
+// Cik kaķus šobrīd varam izveidot (vienlaikus)?
+	// Var izveidot tikai vienu objektu, vajadzētu iespēju uzglabāt vairākus
 }
