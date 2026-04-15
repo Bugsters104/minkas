@@ -75,11 +75,26 @@ public class MinkuTante {
 					 */
 					
 					minkasVards = virknesParbaude("Ievadi kaķa vārdu!", "Rudis");
+					if(minkasVards == null)
+						break;
+					
 					skirne = virknesParbaude("Ievadi kaķa šķirni!", "Meinkūns");
+					if(skirne == null)
+						break;
+					
 					spalvasKrasa = virknesParbaude("Ievadi kaķa kažoka krāsu", "Ruds");
+					if(spalvasKrasa == null)
+						break;
+					
 					dzGads = skaitlaParbaude("Ievadi kaķa dzimšanas gadu!", 
 							(Year.now().getValue() - 18), Year.now().getValue());
+					if(dzGads == -1)
+						break;
+					
 					saimnieks = virknesParbaude("Ievadi kaķa saimnieka vārdu", "Mirdza");
+					if(saimnieks == null)
+						break;
+					
 					int poga = JOptionPane.showConfirmDialog(null,
 							"Vai kaķim ir siksniņa?", "Kaķa siksniņas informācija", 
 							JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -88,6 +103,9 @@ public class MinkuTante {
 					
 					siksnina = (poga == 0)? true : false;
 					cels = virknesParbaude("Ievadi bildes nosaukumu", "rudis");
+					if(cels == null)
+						break;
+					
 					runcis = new Minka(minkasVards, skirne, spalvasKrasa, saimnieks, 
 								dzGads, siksnina, cels);
 					break;
@@ -151,7 +169,13 @@ public class MinkuTante {
 					break;
 					
 				case "Saglabāt failā":
-					DarbsArFailu.saglabat(runcis, failaNosaukums);
+					if(runcis != null) {
+						DarbsArFailu.saglabat(runcis, failaNosaukums);
+						
+					} else
+						JOptionPane.showMessageDialog(null,
+						"Vispirms izveido kaķi!", "Kļūme", 
+						JOptionPane.ERROR_MESSAGE);
 					break;
 					
 				case "Apskatīt saglabātos kaķus":
@@ -164,9 +188,11 @@ public class MinkuTante {
 					break;
 			}
 		} while(!izvelne.equals("Aizvērt"));
-
 	}
 // Kad iespējams iegūt kļūdas ziņojumus?
+	// Ja neveidojot objektu cenšas saglabāt failā, tiek atgriezta kļūda
 // Cik kaķus šobrīd varam izveidot (vienlaikus)?
-	// Var izveidot tikai vienu objektu, vajadzētu iespēju uzglabāt vairākus
+	/* -Var izveidot tikai vienu objektu, 
+	 * vajadzētu iespēju uzglabāt vairākus
+	 */
 }

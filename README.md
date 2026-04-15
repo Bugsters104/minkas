@@ -9,7 +9,8 @@
 - [x] Izveidot klasei "MinkuTante"
 - [x] Izveidot klasi "DarbsArFailu"
 - [x] Versionēt visu izstrādes procesu
-- [ ] Kļūdu labojumi ("Izveidot kaķi")
+- [x] Kļūdu labojumi ("Izveidot kaķi")
+- [x] Kļūdu labojumi ("Saglabāt failā")
 - [ ] Ieviest iespēju uzglabāt vienlaikus vairākus kaķu objektus
 - [x] Izvietot projektu GitHub
-- [ ] Sagatavot projekta .jar failu
+- [x] Sagatavot projekta .jar failu
