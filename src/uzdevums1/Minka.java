@@ -100,7 +100,8 @@ public class Minka {
 		JOptionPane.ERROR_MESSAGE);
 	}
 	
-	void palielinatVecumu() {
+	// Veikta refaktorēšana
+	int palielinatVecumu() {
 		if(vecums < 20) {
 			vecums++;
 			bilde = iestatitBildi("kuka");
@@ -112,6 +113,12 @@ public class Minka {
 			JOptionPane.showMessageDialog(null,
 			"Sasniegts maksimālais vecums!", "Brīdinājums", 
 			JOptionPane.WARNING_MESSAGE);
+		
+		return vecums;
+	}
+	
+	public String apskatitVardu() {
+		return vards;
 	}
 	
 	void nolasitVecumu() {
